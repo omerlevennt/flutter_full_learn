@@ -34,7 +34,7 @@ class TextLearn extends StatelessWidget {
                 overflow: TextOverflow.clip,
                 textAlign: TextAlign.right,
                 textScaleFactor: 1,
-                style: ProjectStayles.welcomeStyle),
+                style: ProjectStyles.welcomeStyle),
             Text('hello $username ${username.length}',
                 maxLines: 2,
                 overflow: TextOverflow.clip,
@@ -59,7 +59,7 @@ class TextLearn extends StatelessWidget {
   }
 }
 
-class ProjectStayles {
+class ProjectStyles {
   static TextStyle welcomeStyle = const TextStyle(
     color: Colors.red,
     decoration: TextDecoration.underline,
