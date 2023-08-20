@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/101/scaffold_learn.dart';
+import 'package:flutter_full_learn/101/button_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Full Learn',
       theme: ThemeData.dark(),
-      home: const ScaffoldLearn(),
+      home: const ButtonLearn(),
     );
   }
 }
