@@ -33,7 +33,7 @@ class CardLearn extends StatelessWidget {
               width: 200,
             ),
           ),
-          _customCard(
+          _CustomCard(
             child: SizedBox(
               height: 100,
               width: 200,
@@ -44,7 +44,7 @@ class CardLearn extends StatelessWidget {
               )),
             ),
           ),
-          _customCard(
+          _CustomCard(
             child: SizedBox(
               height: 100,
               width: 200,
@@ -61,9 +61,8 @@ class CardLearn extends StatelessWidget {
   }
 }
 
-class _customCard extends StatelessWidget {
-  _customCard({
-    super.key,
+class _CustomCard extends StatelessWidget {
+  _CustomCard({
     required this.child,
   });
 

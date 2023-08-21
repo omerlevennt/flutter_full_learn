@@ -71,7 +71,6 @@ class _TitleWidget extends StatelessWidget {
 
 class _TitleWidget2 extends StatelessWidget {
   const _TitleWidget2({
-    super.key,
     required this.title,
     this.textAlign = TextAlign.center,
   });
