@@ -52,6 +52,35 @@ class TextLearn extends StatelessWidget {
                     .textTheme
                     .headlineLarge
                     ?.copyWith(color: ProjectColors.welcome2Color)),
+
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(text: 'Bir hesabin var mi? ', children: [
+                    TextSpan(
+                        text: 'Giris yap',
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline))
+                  ]),
+                ],
+              ),
+            ),
+
+            Wrap(
+              spacing: 5,
+              children: [
+                const Text('Bir hesabin var mi?'),
+                InkWell(
+                    onTap: () {},
+                    child: Text('Giris yap',
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline)))
+              ],
+            )
           ],
         ),
       ),
