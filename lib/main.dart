@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_full_learn/101/lesson2/color_learn.dart';
-import 'package:flutter_full_learn/101/lesson4/stack_learn.dart';
 import 'package:flutter_full_learn/demos/stack_demo_view.dart';
 
 void main() {
