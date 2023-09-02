@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn/product/counter_hello_button.dart';
 
 class StateFullLearn extends StatefulWidget {
   const StateFullLearn({super.key});
@@ -10,6 +11,7 @@ class StateFullLearn extends StatefulWidget {
 
 class _StateFullLearnState extends State<StateFullLearn> {
   int _counterValue = 0;
+
   // void incrementValue() {
   //   setState(() {
   //     _counterValue += 1;
@@ -54,13 +56,15 @@ class _StateFullLearnState extends State<StateFullLearn> {
               style: Theme.of(context).textTheme.headlineLarge,
             ),
           ),
-          const Placeholder()
+          const Placeholder(),
+          const CounterHelloButton(),
         ],
       ),
     );
   }
 
   FloatingActionButton _incramentButton() {
+    // print('burda');
     return FloatingActionButton(
       onPressed: () {
         _uptadeCounter(true);
