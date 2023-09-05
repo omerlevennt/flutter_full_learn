@@ -51,7 +51,6 @@ class NoteDemosView extends StatelessWidget {
 
 class _TitleWidget extends StatelessWidget {
   const _TitleWidget({
-    super.key,
     required this.title,
   });
 
