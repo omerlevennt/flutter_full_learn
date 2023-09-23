@@ -29,7 +29,7 @@ class IconLearn extends StatelessWidget {
               onPressed: () {},
               icon: Icon(Icons.flutter_dash_outlined,
                   size: IconsSizes.iconLarge,
-                  color: Theme.of(context).errorColor)),
+                  color: Theme.of(context).colorScheme.error)),
         ],
       ),
     );

@@ -14,7 +14,7 @@ class ColorLearn extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .bodyMedium
-              ?.copyWith(color: Theme.of(context).errorColor),
+              ?.copyWith(color: Theme.of(context).colorScheme.error),
         ),
       ),
     );

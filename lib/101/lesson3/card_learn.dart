@@ -18,7 +18,7 @@ class CardLearn extends StatelessWidget {
             ),
           ),
           Card(
-            color: Theme.of(context).errorColor,
+            color: Theme.of(context).colorScheme.error,
             shape: const StadiumBorder(),
             child: const SizedBox(
               height: 100,
@@ -26,7 +26,7 @@ class CardLearn extends StatelessWidget {
             ),
           ),
           Card(
-            color: Theme.of(context).errorColor,
+            color: Theme.of(context).colorScheme.error,
             shape: const CircleBorder(),
             child: const SizedBox(
               height: 100,
@@ -72,7 +72,7 @@ class _CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        color: Theme.of(context).errorColor,
+        color: Theme.of(context).colorScheme.error,
         shape: roundedRectangleBorder,
         child: child);
   }
