@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_full_learn/101/lesson2/color_learn.dart';
-import 'package:flutter_full_learn/101/lesson6/navigator_learn.dart';
+import 'package:flutter_full_learn/101/lesson7/refresh_indicator.dart';
 import 'package:flutter_full_learn/product/language/language_items.dart';
 
 void main() {
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
-      home: const NavigatorLearn(),
+      home: const RefreshIndicatorLearn(),
     );
   }
 }
