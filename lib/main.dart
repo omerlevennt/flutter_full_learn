@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_full_learn/101/lesson2/color_learn.dart';
-import 'package:flutter_full_learn/101/lesson7/tab_indicator.dart';
+import 'package:flutter_full_learn/202/lesson1/model_view_learn.dart';
 import 'package:flutter_full_learn/product/language/language_items.dart';
 
 void main() {
@@ -17,6 +17,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: LanguageItems.appTitle,
       theme: ThemeData.dark().copyWith(
+          bottomAppBarTheme:
+              const BottomAppBarTheme(shape: CircularNotchedRectangle()),
+          tabBarTheme: const TabBarTheme(
+              labelColor: Colors.white,
+              unselectedLabelColor: Colors.green,
+              indicatorSize: TabBarIndicatorSize.label),
           textSelectionTheme: const TextSelectionThemeData(),
           inputDecorationTheme: const InputDecorationTheme(
               filled: true,
@@ -43,7 +49,7 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
-      home: const TabIndicatorLearn(),
+      home: const ModelViewLearn(),
     );
   }
 }
