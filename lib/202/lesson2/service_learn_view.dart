@@ -73,14 +73,7 @@ class _ServiceLearnViewState extends State<ServiceLearnView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          _isLoading
-              ? const CircularProgressIndicator.adaptive()
-              : const SizedBox.shrink()
-        ],
-        title: Text(name ?? ''),
-      ),
+      appBar: _AppBar(isLoading: _isLoading, name: name),
       body: ListView.builder(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         itemCount: _items?.length ?? 0,
@@ -90,6 +83,31 @@ class _ServiceLearnViewState extends State<ServiceLearnView> {
       ),
     );
   }
+}
+
+class _AppBar extends StatelessWidget implements PreferredSizeWidget {
+  const _AppBar({
+    required bool isLoading,
+    required this.name,
+  }) : _isLoading = isLoading;
+
+  final bool _isLoading;
+  final String? name;
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      actions: [
+        _isLoading
+            ? const CircularProgressIndicator.adaptive()
+            : const SizedBox.shrink()
+      ],
+      title: Text(name ?? ''),
+    );
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
 class _PostCard extends StatelessWidget {

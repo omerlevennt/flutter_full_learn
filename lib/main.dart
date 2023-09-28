@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_full_learn/101/lesson2/color_learn.dart';
-import 'package:flutter_full_learn/202/lesson1/model_view_learn.dart';
-import 'package:flutter_full_learn/202/lesson2/service_advence_learn_view.dart';
-import 'package:flutter_full_learn/202/lesson2/service_learn_view.dart';
-import 'package:flutter_full_learn/202/lesson2/service_post_learn_view.dart';
+import 'package:flutter_full_learn/demos/service_demo/fake_user_view.dart';
 import 'package:flutter_full_learn/product/language/language_items.dart';
 
 void main() {
@@ -36,7 +33,7 @@ class MyApp extends StatelessWidget {
                   fontSize: 16,
                   fontWeight: FontWeight.w600),
               border: OutlineInputBorder()),
-          textTheme: const TextTheme(subtitle1: TextStyle(color: Colors.red)),
+          textTheme: const TextTheme(subtitle1: TextStyle(color: Colors.white)),
           listTileTheme:
               const ListTileThemeData(contentPadding: EdgeInsets.zero),
           progressIndicatorTheme:
@@ -52,7 +49,7 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
-      home: const ServiceLearnView(),
+      home: const FakeUserView(),
     );
   }
 }
