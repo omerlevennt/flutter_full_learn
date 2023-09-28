@@ -30,6 +30,7 @@ class PostModel3 {
 }
 
 class PostModel4 {
+  //localde
   final int userId;
   final int id;
   final String title;
@@ -100,11 +101,12 @@ class PostModel7 {
 
 //Servisten bir data geliyorsa eger null atilir ve opsional parametre yapilir
 class PostModel8 {
+  //service de
   final int? userId;
   final int? id;
   final String? title;
   String? body;
-
+// Now , initialze
   PostModel8({this.userId, this.id, this.title, this.body});
 
   void updateBody(String? data) {
@@ -121,6 +123,4 @@ class PostModel8 {
         title: title ?? this.title,
         body: body ?? this.body);
   }
-
-  // Now , initialze
 }

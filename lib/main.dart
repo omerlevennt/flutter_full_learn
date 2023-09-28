@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_full_learn/101/lesson2/color_learn.dart';
 import 'package:flutter_full_learn/202/lesson1/model_view_learn.dart';
+import 'package:flutter_full_learn/202/lesson2/service_advence_learn_view.dart';
+import 'package:flutter_full_learn/202/lesson2/service_learn_view.dart';
+import 'package:flutter_full_learn/202/lesson2/service_post_learn_view.dart';
 import 'package:flutter_full_learn/product/language/language_items.dart';
 
 void main() {
@@ -49,7 +52,7 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             systemOverlayStyle: SystemUiOverlayStyle.light,
           )),
-      home: const ModelViewLearn(),
+      home: const ServiceLearnView(),
     );
   }
 }
