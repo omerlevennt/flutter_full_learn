@@ -13,7 +13,7 @@ class SecureStorageLearn extends StatefulWidget {
 class _SecureStorageLearnState extends State<SecureStorageLearn> {
   final _storage = const FlutterSecureStorage();
   String _title = '';
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
   void saveItems(String data) {
     setState(() {
       _title = data;
