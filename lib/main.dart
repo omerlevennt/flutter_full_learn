@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/202/lesson3/theme/light_theme.dart';
-import 'package:flutter_full_learn/303/lesson2/tabbar_advance_learn.dart';
-import 'package:flutter_full_learn/303/lesson3/reqres_resource/view/reqres_view.dart';
+import 'package:flutter_full_learn/303/lesson3/reqres_resource/view/reqres_view_advance.dart';
+import 'package:flutter_full_learn/product/global/resource_context.dart';
+import 'package:flutter_full_learn/product/global/theme_notifer.dart';
 import 'package:flutter_full_learn/product/language/language_items.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      Provider(create: (_) => ResourceContext()),
+      ChangeNotifierProvider<ThemeNotifer>(create: (context) => ThemeNotifer())
+    ],
+    builder: (context, child) {
+      return const MyApp();
+    },
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -16,8 +25,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: LanguageItems.appTitle,
-      theme: LightTheme().theme,
-      home: const ReqresView(),
+      theme: context.watch<ThemeNotifer>().currnetTheme,
+      home: const ReqresViewAdvance(),
     );
   }
 }
