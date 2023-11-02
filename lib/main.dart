@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/303/lesson3/reqres_resource/view/reqres_view_advance.dart';
+import 'package:flutter_full_learn/303/lesson4/lottie_learn.dart';
+import 'package:flutter_full_learn/product/constants/project_items.dart';
 import 'package:flutter_full_learn/product/global/resource_context.dart';
 import 'package:flutter_full_learn/product/global/theme_notifer.dart';
-import 'package:flutter_full_learn/product/language/language_items.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -24,9 +24,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: LanguageItems.appTitle,
+      title: ProjectItems.projectName,
       theme: context.watch<ThemeNotifer>().currnetTheme,
-      home: const ReqresViewAdvance(),
+      home: const LottieLearn(),
     );
   }
 }

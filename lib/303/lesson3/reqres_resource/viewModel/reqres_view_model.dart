@@ -3,6 +3,7 @@ import 'package:flutter_full_learn/303/lesson3/reqres_resource/model/resource_mo
 import 'package:flutter_full_learn/303/lesson3/reqres_resource/service/reqres_service.dart';
 import 'package:flutter_full_learn/303/lesson3/reqres_resource/view/reqres_view.dart';
 import 'package:flutter_full_learn/product/service/project_dio.dart';
+import 'package:flutter_full_learn/product/service/project_network_manager.dart';
 
 abstract class ReqresViewModel extends LoadingStateFull<ReqresView>
     with ProjectDioMixin {
@@ -12,7 +13,9 @@ abstract class ReqresViewModel extends LoadingStateFull<ReqresView>
   @override
   void initState() {
     super.initState();
-    reqresService = ResourceService(dio: service);
+    reqresService =
+        ResourceService(dio: ProjectNetworkManager.instance.service);
+    ProjectNetworkManager.instance.addBaseHeaderToToken('omer');
     _fetch();
   }
 
