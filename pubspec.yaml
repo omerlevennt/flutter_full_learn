@@ -30,6 +30,7 @@ dependencies:
 
   #core
   equatable: ^2.0.5
+  collection: any
   
   #animation
   flutter_spinkit: ^5.2.0
