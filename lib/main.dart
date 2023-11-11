@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/303/lesson4/lottie_learn.dart';
 import 'package:flutter_full_learn/product/constants/project_constants.dart';
 import 'package:flutter_full_learn/product/global/resource_context.dart';
 import 'package:flutter_full_learn/product/global/theme_notifer.dart';
+import 'package:flutter_full_learn/product/navigator/navigator_custom.dart';
+import 'package:flutter_full_learn/product/navigator/navigator_manager.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -17,7 +18,7 @@ void main() {
   ));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget with NavigatorCustom {
   const MyApp({super.key});
 
   @override
@@ -26,7 +27,18 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: ProjectConstants.projectName,
       theme: context.watch<ThemeNotifer>().currnetTheme,
-      home: const LottieLearn(),
+      //home: const LottieLearn(),
+      //initialRoute: '/',
+      //routes: NavigatorRoutes().items,
+      navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
+      onGenerateRoute: onGenerateRoute,
+      // onUnknownRoute: (settings) {
+      //   return MaterialPageRoute(
+      //     builder: (context) {
+      //       return const LottieLearn();
+      //     },
+      //   );
+      // },
     );
   }
 }

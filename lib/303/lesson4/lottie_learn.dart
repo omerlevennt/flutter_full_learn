@@ -5,6 +5,8 @@ import 'package:flutter_full_learn/product/global/theme_notifer.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
+import '../../product/navigator/navigator_routes.dart';
+
 class LottieLearn extends StatefulWidget {
   const LottieLearn({super.key});
 
@@ -21,6 +23,13 @@ class _LottieLearnState extends State<LottieLearn>
     super.initState();
     controller = AnimationController(
         vsync: this, duration: DurationItems.durationNormal());
+    navigateToHome();
+  }
+
+  Future<void> navigateToHome() async {
+    await Future.delayed(const Duration(seconds: 3));
+    //Navigator.of(context).pushNamed(NavigateRoutes.home.withParaf);
+    Navigator.of(context).pushReplacementNamed(NavigateRoutes.home.withParaf);
   }
 
   @override
