@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/303/lesson4/lottie_learn.dart';
-import 'package:flutter_full_learn/product/constants/project_items.dart';
+import 'package:flutter_full_learn/product/constants/project_constants.dart';
 import 'package:flutter_full_learn/product/global/resource_context.dart';
 import 'package:flutter_full_learn/product/global/theme_notifer.dart';
 import 'package:provider/provider.dart';
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: ProjectItems.projectName,
+      title: ProjectConstants.projectName,
       theme: context.watch<ThemeNotifer>().currnetTheme,
       home: const LottieLearn(),
     );
