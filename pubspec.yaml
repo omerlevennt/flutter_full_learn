@@ -16,6 +16,7 @@ dependencies:
   
   #google
   url_launcher: ^6.1.14
+  image_picker: ^1.0.4
   json_serializable: ^6.7.1
   json_annotation: ^4.8.1
   google_fonts: ^6.1.0
@@ -27,6 +28,7 @@ dependencies:
 
   #States
   provider: ^6.0.5
+  flutter_mobx: ^2.1.1
 
   #core
   equatable: ^2.0.5
@@ -43,6 +45,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   build_runner: ^2.4.6
   flutter_launcher_icons: ^0.11.0
+  mobx_codegen: ^2.4.0
   
 
 flutter_launcher_icons:
