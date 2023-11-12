@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/303/lesson5/mobx/view/mobx_image_upload_view.dart';
+import 'package:flutter_full_learn/303/lesson6/package/kartal/kartal_view.dart';
 import 'package:flutter_full_learn/product/constants/project_constants.dart';
 import 'package:flutter_full_learn/product/global/resource_context.dart';
 import 'package:flutter_full_learn/product/global/theme_notifer.dart';
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget with NavigatorCustom {
       debugShowCheckedModeBanner: false,
       title: ProjectConstants.projectName,
       theme: context.watch<ThemeNotifer>().currnetTheme,
-      home: const MobxImageUploadView(),
+      home: const KartalView(),
       //initialRoute: '/',
       //routes: NavigatorRoutes().items,
       navigatorKey: NavigatorManager.instance.navigatorGlobalKey,

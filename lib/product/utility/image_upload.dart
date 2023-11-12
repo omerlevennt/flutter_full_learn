@@ -7,4 +7,10 @@ class ImageUploadManager {
     final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
     return image;
   }
+
+  Future<XFile?> fecthFromCamera() async {
+    // Pick an image.
+    final XFile? image = await _picker.pickImage(source: ImageSource.camera);
+    return image;
+  }
 }
